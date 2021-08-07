@@ -8,14 +8,14 @@ const EventSchema = new Schema({
         required: [true, 'event_type is required'],
     },
     event_id: {
-        type: String,
+        type: String, // add auto uuid? 
         required: [true, 'event_id is required']
     },
     event_name: {
         type: String,
         required: [false]
     }
-}, { timestamps: true });
+}, { timestamps: true }); // timestamps for filtering 
 
 const Event = mongoose.model('event', EventSchema);
 module.exports = Event;
