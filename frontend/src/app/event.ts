@@ -1,4 +1,4 @@
 export class Event {
-    id: number;
-    name: string;
+    _id: string;
+    count: number;
 }
