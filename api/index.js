@@ -11,20 +11,18 @@ mongoose.promise = global.Promise;
 mongoose.connect('mongodb://localhost/remarkety');
 mongoose.set('useFindAndModify', false);
 
+// middlewares
 app.use(bodyParser.json());
-
-
 app.use(cors());
+
+// routes
+// TODO: specify Content-Type: application/json, HTTP 1.1 ?
+app.use('/api', routes);
 
 // errors
 app.use(function (err, req, res, next) {
   res.status(422).send({ error: err.message })
 })
-
-// routes
-// TODO: specify Content-Type: application/json ?
-app.use('/api', routes);
-
 
 app.listen(process.env.port || 4000, function () {
   console.log('listening...');
