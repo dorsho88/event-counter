@@ -3,15 +3,20 @@ const Event = require('../models/event');
 const router = express.Router();
 
 // get all
+// groupBy event_type
+// sort by count of event_type DESC
 router.get('/events', function (req, res) {
-  Event.aggregate([{
-    $group:
+  Event.aggregate([
     {
-      _id: "$event_type",
-      count: { $sum: 1 }
-    }
-  }]).then(function (events) {
-    res.send(events)
+      $group:
+      {
+        _id: "$event_type",
+        count: { $sum: 1 }
+      }
+    },
+    { "$sort": { "count": -1 } }
+  ]).then(function (events) {
+    res.send(events);
   });
 
 });
