@@ -8,7 +8,7 @@ const EventSchema = new Schema({
         required: [true, 'event_type is required'],
     },
     event_id: {
-        type: String, // add auto uuid? 
+        type: String, // add auto uuid? make unique?
         required: [true, 'event_id is required']
     },
     event_name: {

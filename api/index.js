@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const routes = require('./routes/api');
 const mongoose = require('mongoose');
 const cors = require('cors');
-
+const path = require('path');
 const app = express();
 
 // db
@@ -12,6 +12,7 @@ mongoose.connect('mongodb://localhost/remarkety');
 mongoose.set('useFindAndModify', false);
 
 // middlewares
+app.use(express.static(path.join(__dirname, '/../frontend/dist/event-counter')));
 app.use(bodyParser.json());
 app.use(cors());
 
@@ -25,5 +26,5 @@ app.use(function (err, req, res, next) {
 })
 
 app.listen(process.env.port || 4000, function () {
-  console.log('listening...');
+  console.log('Started Remarkety Event Counter App. Listening for event requests...');
 })
