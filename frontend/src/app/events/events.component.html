@@ -1,13 +1,3 @@
-<!-- <ul class="events">
-    <li>
-        Event Type <span class="badge">Count</span>
-    </li>
-
-    <li *ngFor="let event of events" (click)="onSelect(event)" [class.selected]="event === selectedHero">
-        {{event._id}} <span class="badge">{{event.count}}</span>
-    </li>
-</ul> -->
-
 <table mat-table [dataSource]="events" class="mat-elevation-z8">
     <!-- Type Column -->
     <ng-container matColumnDef="_id">
@@ -24,5 +14,3 @@
     <tr mat-header-row *matHeaderRowDef="['_id', 'count']"></tr>
     <tr mat-row *matRowDef="let row; columns: ['_id', 'count'];"></tr>
 </table>
-
-<app-event-detail [event]="selectedEvent"></app-event-detail>

@@ -11,7 +11,7 @@ export class EventService {
 
   constructor(private http: HttpClient) { }
 
-  private eventsUrl = 'http://localhost:4000/api/events';  // URL to web api
+  private eventsUrl = 'http://localhost:4000/api/events';  // URL to web api // should be in an ENV file
 
   getEvents(): Observable<Event[]> {
     return this.http.get<Event[]>(this.eventsUrl)
