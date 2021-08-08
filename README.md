@@ -1,7 +1,5 @@
 # event-counter
 "The application collects events sent to it, and has a user interface which shows a tally of the events" (as described in task sheet).
-<<<<<<< HEAD
-=======
 This application was created using nodejs and Angular.
 
 ### Requirements
@@ -10,12 +8,12 @@ This application was created using nodejs and Angular.
 
 ### App Instalation
 - Clone the repo from branch `master`.
-- Be sure to be in the project folder `cd remarkety`.
-- Inside the `remarkety` folder, install api & frontend modules with a single `npm install`command.
+- Be sure to be in the project folder `cd event-counter`.
+- Inside the `event-counter` folder, install api & frontend modules with a single `npm install`command.
   (a postinstall script will do the work and init the app).
 - The app is running and accessable at `localhost:4000`;
 
 ### MongoDB
 - TODO
 
->>>>>>> master
+
