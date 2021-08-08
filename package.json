@@ -1,0 +1,24 @@
+{
+  "name": "remarkety",
+  "version": "1.0.0",
+  "description": "",
+  "main": " ",
+  "dependencies": {
+    "postinstall": "^0.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "postinstall": "cd frontend && npm install && cd ../api && npm install && node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dorsho88/event-counter.git"
+  },
+  "author": "Dor Shoham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dorsho88/event-counter/issues"
+  },
+  "homepage": "https://github.com/dorsho88/event-counter#readme"
+}
