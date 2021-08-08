@@ -11,7 +11,7 @@ This application was created using nodejs and Angular.
 - Be sure to be in the project folder `cd remarkety`.
 - Inside the `remarkety` folder, install api & frontend modules with a single `npm install`command.
   (a postinstall script will do the work and init the app).
-- The app is running and accessable at localhost:4000;
+- The app is running and accessable at `localhost:4000`;
 
 ### MongoDB
 - TODO
