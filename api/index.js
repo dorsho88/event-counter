@@ -11,8 +11,10 @@ mongoose.promise = global.Promise;
 mongoose.connect('mongodb://localhost/remarkety');
 mongoose.set('useFindAndModify', false);
 
-// middlewares
+// serve frontend on root
 app.use(express.static(path.join(__dirname, '/../frontend/dist/event-counter')));
+
+// middlewares
 app.use(bodyParser.json());
 app.use(cors());
 
